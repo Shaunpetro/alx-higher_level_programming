@@ -36,7 +36,7 @@ class Square(Rectangle):
                 - 2nd argument represents size attribute
                 - 3rd argument represents x attribute
                 - 4th argument represents y attribute
-             **kwargs (dict): New key/value pairs of attributes.
+            **kwargs (dict): New key/value pairs of attributes.
         """
         if args and len(args) != 0:
             a = 0
@@ -46,13 +46,13 @@ class Square(Rectangle):
                         self.__init__(self.size, self.x, self.y)
                     else:
                         self.id = arg
-                    elif a == 1:
-                        self.size = arg
-                    elif a == 2:
-                        self.x = arg
-                    elif a == 3:
-                        self.y = arg
-                    a += 1
+                elif a == 1:
+                    self.size = arg
+                elif a == 2:
+                    self.x = arg
+                elif a == 3:
+                    self.y = arg
+                a += 1
 
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
@@ -68,16 +68,16 @@ class Square(Rectangle):
                 elif k == "y":
                     self.y = v
 
-    def to_dictionary(self):
-        """Return the dictionary representation of the Square."""
-        return {
-            "id": self.id,
-            "size": self.width,
-            "x": self.x,
-            "y": self.y
-        }
+        def to_dictionary(self):
+            """Return the dictionary representation of the Square."""
+            return {
+                "id": self.id,
+                "size": self.width,
+                "x": self.x,
+                "y": self.y
+            }
 
-    def __str__(self):
-        """Return the print() and str() representation of a Square."""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
-                                                 self.width)
+        def __str__(self):
+            """Return the print() and str() representation of a Square."""
+            return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                     self.width)
