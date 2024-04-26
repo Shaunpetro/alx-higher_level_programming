@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 """fetch the status of https://alx-intranet.hbnb.io/status"""
-
+from urllib import request
 
 if __name__ == "__main__":
-    import urllib.request
-
     '''url http service'''
     url = 'https://intranet.hbnb.io/status'
 

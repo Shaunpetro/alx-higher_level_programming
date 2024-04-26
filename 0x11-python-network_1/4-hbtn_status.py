@@ -3,7 +3,7 @@
 from requests import get
 
 
-if __name__ -= '__main__':
+if __name__ == '__main__':
     url = get('https://intranet.hbnb.io/status')
     print("Body response:")
     print("\t- type: {}".format(type(url.text)))
