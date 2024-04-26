@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """sends a PO request to the passed URL with the email as par"""
 from urllib import request, parse
 from sys import argv
